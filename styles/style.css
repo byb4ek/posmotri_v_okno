@@ -53,7 +53,7 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   min-width: 1140px;
   padding: 115px 0 0 0;
 }
@@ -189,19 +189,22 @@ ol {
   text-align: left;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
+  padding: 26px 0 0 0;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   min-width: 400px;
-  margin: 0 0 0 30px;
-  gap: 24px;
+  max-height: 560px;
+  margin: -7px 0 0 30px;
+  gap: 47px;
 }
 
 .content__list {
   position: relative;
-  max-height: 298px;
+  max-height: 320px;
+  width: 100%;
   overflow: hidden auto;
 }
 
@@ -243,6 +246,7 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
 }
 
@@ -276,15 +280,6 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
-/* У этого элемента нужно сбросить обводку в состоянии фокуса и 
-вместо этого делать границу у лейбла, который его окружает. 
-Лейбл должен получать границу только когда у поля находится в 
-состоянии focus-visible, но не focus. Чтобы такое реализовать, 
-можно применить хитрую комбинацию псевдоклассов — :has(:focus-visible). */
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
@@ -292,6 +287,11 @@ ol {
 
 .search-form__textfield:hover {
   cursor: text;
+}
+
+.search-form__label:has(:active) {
+  outline: none;
+  border: 1px solid #fff;
 }
 
 .button:focus {
