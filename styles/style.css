@@ -159,7 +159,7 @@ ol {
   width: 100%;
   min-height: 34px;
   padding: 6px 140px;
-  margin: 0 3px 3px 3px;
+  margin: 0 1px 3px 2px;
 }
 
 .search-form__submit-button {
@@ -181,12 +181,6 @@ ol {
 
 .search-form__fieldset:nth-child(2) {
   padding: 0 0 0 12px;
-  /* 
-
-исправить
-
-
-	 */
 }
 
 .title {
@@ -214,14 +208,11 @@ ol {
   gap: 30px;
   padding: 0 5px 0 0;
   position: relative;
-  max-height: 304px;
+  max-height: 299px;
   width: 100%;
-  overflow: hidden auto;
+  overflow: clip auto;
 }
 
-.content__list:nth-child(:last-child) {
-  gap: 25px;
-}
 .content__list::-webkit-scrollbar {
   background: transparent;
 }
@@ -263,8 +254,7 @@ ol {
   flex-grow: 1;
   gap: 6px;
   flex-direction: column;
-  gap: 8px;
-  padding: 0 0 0 3px;
+  padding: 0 0 0 1px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
@@ -277,7 +267,6 @@ ol {
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
   max-width: 200px;
 }
 
@@ -292,7 +281,6 @@ ol {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .search-form__textfield:focus {
@@ -319,7 +307,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .button:hover {
@@ -347,14 +335,13 @@ input[type="checkbox"]:checked + span {
 .content__list-item:active {
   background-color: rgba(84, 80, 80, 1);
   text-decoration: none;
-  /* outline: none */
 }
 
 .content__list-item:hover {
   text-decoration: underline;
   text-decoration-color: #fff;
-  font-weight: 100;
-  text-underline-offset: 6px;
+  font-weight: 700;
+  text-underline-offset: 1px;
   cursor: pointer;
 }
 
@@ -364,6 +351,7 @@ input[type="checkbox"]:checked + span {
 
 .content__card-link_current:active {
   background-color: rgba(84, 80, 80, 1);
+  text-decoration: none;
 }
 
 .content__card-link:active {
