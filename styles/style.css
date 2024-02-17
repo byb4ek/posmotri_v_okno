@@ -237,7 +237,7 @@ ol {
   flex-shrink: 0;
   width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .content__accent {
@@ -292,11 +292,6 @@ ol {
   outline-offset: 2px;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
 .search-form__textfield:hover {
   cursor: text;
 }
@@ -312,7 +307,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .button:hover {
